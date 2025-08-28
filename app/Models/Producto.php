@@ -34,14 +34,14 @@ class Producto extends Model
     }
 
     // Relación uno a muchos con Reseñas
-    public function reseñas()
+    public function resenias()
     {
-        return $this->hasMany(Reseña::class, 'producto_id');
+        return $this->hasMany(Resenia::class, 'producto_id');
     }
 
-    // Método para calcular la calificación promedio (opcional, para conveniencia)
-    public function calificacionPromedio()
-    {
-        return $this->reseñas()->avg('calificacion');
-    }
+    // // Método para calcular la calificación promedio (opcional, para conveniencia)
+    // public function calificacionPromedio()
+    // {
+    //     return $this->reseñas()->avg('calificacion');
+    // }
 }
